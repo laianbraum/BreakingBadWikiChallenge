@@ -5,13 +5,14 @@ import useGetAllCharacters from '../../hooks/useGetAllCharacters';
 
 import { CardsContainer } from '../../styles/CharacterCard';
 import CharacterCard from '../../components/CharacterCard';
+import Loading from '../../components/Loading';
 
 export default function HomePage(){
 
   const characters = useGetAllCharacters(); 
 
   if(!characters){
-    return <h1>Loading...</h1>
+    return <Loading />
   }
 
   return (
