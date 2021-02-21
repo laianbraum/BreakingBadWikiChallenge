@@ -62,10 +62,10 @@ export default function CharacterProfile({ character } : { character: Character 
               {
                 character.occupation.map((occupation) => {
                   return (
-                    <>
+                    <span key={occupation}>
                       <br/>
                       - {occupation}
-                    </>
+                    </span>
                   )
                 })
               }

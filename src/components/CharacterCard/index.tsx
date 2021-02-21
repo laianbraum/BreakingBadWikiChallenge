@@ -44,10 +44,10 @@ export default function CharacterCard(
             {
               character.occupation.map((occupation) => {
                 return (
-                  <>
+                  <span key={occupation}>
                     <br/>
                     - {occupation}
-                  </>
+                  </span>
                 )
               })
             }
