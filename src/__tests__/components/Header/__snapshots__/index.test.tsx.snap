@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testa o Header com sucesso Deveria renderizar 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ bBSKhy"
+  >
+    Breaking bad wiki
+  </div>
+</div>
+`;
