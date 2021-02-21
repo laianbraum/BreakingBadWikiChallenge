@@ -11,7 +11,7 @@
 - Axios
 
 ## HomePage 
-<img src="https://user-images.githubusercontent.com/61033391/108615126-a058af80-73df-11eb-910a-54e2ae9aec2c.pngg"></img>
+<img src="https://user-images.githubusercontent.com/61033391/108615126-a058af80-73df-11eb-910a-54e2ae9aec2c.png"></img>
 
 ## CharacterPage
-<img src="https://user-images.githubusercontent.com/61033391/108615127-a0f14600-73df-11eb-904e-029db8ea4fd4.pngg"></img>
+<img src="https://user-images.githubusercontent.com/61033391/108615127-a0f14600-73df-11eb-904e-029db8ea4fd4.png"></img>
