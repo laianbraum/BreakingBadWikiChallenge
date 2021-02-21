@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const CharacterPageContainer = styled.div`
 
   width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -25,6 +27,7 @@ export const CharacterProfileContainer = styled.div`
     width: 100%;
     height: auto;
     flex-direction: column;
+    justify-content: center;
   }
 
 `
