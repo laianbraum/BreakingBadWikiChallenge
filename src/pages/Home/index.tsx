@@ -20,8 +20,8 @@ export default function HomePage(){
         characters.map((character) => {
           return (
             <Link
-              to={`/character/${character.char_id}`}
               key={character.char_id}
+              to={`/character/${character.char_id}`}
               target="_blank"
               rel="noreferrer"
             >

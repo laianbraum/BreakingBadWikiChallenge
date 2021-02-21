@@ -24,6 +24,7 @@ export default function StarredEpisodes({ starredEpisodes }: { starredEpisodes: 
           starredEpisodes?.map((episode) => {
             return (
               <EpisodeCard
+                key={episode.id}
                 episode={episode}
               />
             )
