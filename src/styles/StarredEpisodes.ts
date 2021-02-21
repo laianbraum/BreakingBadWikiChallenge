@@ -8,7 +8,11 @@ export const StarredEpisodesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+
+  > span{
+    text-align: center;
+  }
 
   @media only screen and (max-width: 600px){
     > div {

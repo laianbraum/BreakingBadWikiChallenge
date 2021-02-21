@@ -23,7 +23,7 @@ export const CharacterProfileContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 600px){
+  @media only screen and (max-width: 1280px){
     width: 100%;
     height: auto;
     flex-direction: column;
@@ -33,7 +33,7 @@ export const CharacterProfileContainer = styled.div`
 `
 export const CharacterInfoWrapper = styled.div`
 
-  width: 90%;
+  width: 70%;
   height: 100%;
 
   margin-left: 40px;
