@@ -12,16 +12,17 @@ import {
 
 import CharacterProfile from '../../components/CharacterProfile';
 import StarredEpisodes from '../../components/StarredEpisodes';
+import Loading from '../../components/Loading';
 
 
 export default function CharacterPage(){
   
   const { id } = useParams<ParamTypes>();
   const character = useGetOneCharacter(id);
-  const starredEpisodes = useGetEpisodes(character?.name)
+  const starredEpisodes = useGetEpisodes(character?.name.split(' ').join('+'))
 
   if(!character || !starredEpisodes){
-    return <h1>Loading...</h1>
+    return <Loading />
   }
   return (
     <CharacterPageContainer>
