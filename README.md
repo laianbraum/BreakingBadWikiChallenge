@@ -1,4 +1,6 @@
-# :books: Breaking Bad Wiki
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22f1fc9a-69ec-4e28-9d9d-13d865100377/deploy-status)](https://laianbraum-breakingbadwiki.netlify.app/)
+
+# :books: [Breaking Bad Wiki](https://laianbraum-breakingbadwiki.netlify.app/)
 
 #### Breaking Bad Wiki é uma aplicação feita para aplicação em uma vaga de FrontEnd Jr na empresa [Tegrus](https://www.linkedin.com/company/tegrus-br/). 
 
