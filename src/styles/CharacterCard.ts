@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardsContainer = styled.div`
 
   width: 100%;
+  max-width: 2000px;
   min-height: 90vh;
 
   margin: 0 auto;

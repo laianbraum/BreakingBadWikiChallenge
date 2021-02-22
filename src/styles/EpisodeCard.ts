@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 export const EpisodeCard = styled.div`
 
-  width: 250px;
-  height: 250px;
+  width: 95%;
+  max-width: 250px;
+  min-height: 250px;
 
   border-radius: 8px;
   padding: 12px;
