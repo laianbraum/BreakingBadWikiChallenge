@@ -19,7 +19,7 @@ export default function CharacterPage(){
   
   const { id } = useParams<ParamTypes>();
   const character = useGetOneCharacter(id);
-  const starredEpisodes = useGetEpisodes(character?.name.split(' ').join('+'))
+  const starredEpisodes = useGetEpisodes(character?.name,character?.nickname)
 
   if(!character || !starredEpisodes){
     return <Loading />
