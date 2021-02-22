@@ -9,7 +9,7 @@ export default function useGetOneCharacter(
 
   useEffect(() => {
     
-    characterName && nickname && api.get(`/episodes/`).then((response) => {
+    characterName && nickname && api.get(`/episodes?series=Breaking+Bad`).then((response) => {
       let episodesAux: Episode[] = [];
       response.data.forEach((episode : Episode) => {
         if (episode.characters.includes(characterName) || episode.characters.includes(nickname)){
