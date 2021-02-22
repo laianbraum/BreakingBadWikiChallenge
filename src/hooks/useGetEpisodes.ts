@@ -10,13 +10,10 @@ export default function useGetOneCharacter(
   useEffect(() => {
     
     characterName && nickname && api.get(`/episodes?series=Breaking+Bad`).then((response) => {
-      let episodesAux: Episode[] = [];
-      response.data.forEach((episode : Episode) => {
-        if (episode.characters.includes(characterName) || episode.characters.includes(nickname)){
-          episodesAux = [...episodesAux, episode]
-        }
-      })
-      setEpisodes(episodesAux);
+      setEpisodes(response.data.filter(
+        (episode : Episode) =>
+          episode.characters.includes(nickname) || episode.characters.includes(characterName)
+        ))
     });
   }, [characterName, nickname]);
 
