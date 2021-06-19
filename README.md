@@ -2,9 +2,9 @@
 
 # :books: [Breaking Bad Wiki](https://laianbraum-breakingbadwiki.netlify.app/)
 
-#### Breaking Bad Wiki é uma aplicação feita para aplicação em uma vaga de FrontEnd Jr na empresa [Tegrus](https://www.linkedin.com/company/tegrus-br/). 
+#### Breaking Bad Wiki is a technical test for a Fullstack developer job application in [Tegrus](https://www.linkedin.com/company/tegrus-br/).
 
-## 🚀 Tecnologias utilizadas
+## 🚀 Technologies
 - ReactJS
 - Styled Components
 - Typescript
