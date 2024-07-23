@@ -1,4 +1,4 @@
-# :books: [Breaking Bad Wiki](https://laianbraum-breakingbadwiki.netlify.app/)
+# :books: Breaking Bad Wiki
 
 #### Breaking Bad Wiki is a technical test for a Fullstack developer job application in [Tegrus](https://www.linkedin.com/company/tegrus-br/).
 
