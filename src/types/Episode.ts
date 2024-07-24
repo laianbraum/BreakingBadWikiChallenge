@@ -1,8 +1,8 @@
-export default interface Episode{
+export interface Episode {
   id: number;
   title: string;
-  season: number;
-  episode: number;
+  season: string;
+  episode: string;
   air_date: string;
   characters: string[];
   series: string;

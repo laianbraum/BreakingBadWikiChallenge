@@ -1,14 +1,12 @@
-export default interface Character{
-
+export interface Character {
   char_id: number;
   name: string;
+  portrayed: string;
+  img: string;
+  full_name: string;
   birthday: string;
   occupation: string[];
-  img: string;
   status: string;
   appearance: string[];
   nickname: string;
-  portrayed: string;
-  better_call_saul_appeareance: string[];
-
 }

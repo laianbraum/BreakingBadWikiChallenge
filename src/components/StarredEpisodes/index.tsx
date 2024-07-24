@@ -1,35 +1,22 @@
-import React from 'react';
+import { EpisodeCard } from "@/components";
+import type { Episode } from "@/types";
 
-import Episode from "../../types/Episode";
+interface StarredEpisodesProps {
+  episodes: Episode[];
+}
 
-import {
-  StarredEpisodesContainer
-} from '../../styles/StarredEpisodes';
-import StyledText from '../../styles/StyledText';
-
-import EpisodeCard from '../../components/EpisodeCard';
-
-export default function StarredEpisodes({ starredEpisodes }: { starredEpisodes: Episode[] }){
+export function StarredEpisodes({ episodes }: StarredEpisodesProps) {
   return (
-    <StarredEpisodesContainer>
-        <StyledText
-          fontSize="30pt"
-          color="#101010"
-          margin="30px 0"
-        >
-          <strong>Starred Episodes</strong>
-        </StyledText>
-        
-        {
-          starredEpisodes?.map((episode) => {
-            return (
-              <EpisodeCard
-                key={episode.id}
-                episode={episode}
-              />
-            )
-          })
-        }
-      </StarredEpisodesContainer>
-  )
+    <div className="w-full mx-auto flex flex-col md:w-[90%]">
+      <span className="text-3xl text-grey-950 mx-7 my-0 text-center">
+        <strong>Starred Episodes</strong>
+      </span>
+
+      <div className="w-full mt-5 flex flex-wrap items-center justify-center gap-5">
+        {episodes?.map((episode) => (
+          <EpisodeCard key={episode.id} episode={episode} />
+        ))}
+      </div>
+    </div>
+  );
 }
