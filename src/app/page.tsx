@@ -18,7 +18,7 @@ export default async function Home() {
   // const characters = await getCharacters();
 
   return (
-    <div className="w-full max-w-[2000px] min-h-[90vh] my-0 mx-auto flex flex-wrap items-center bg-white">
+    <div className="w-full max-w-[2000px] min-h-[90vh] my-0 mx-auto flex flex-wrap items-center justify-center bg-white">
       {characters.map((character) => {
         return <CharacterCard key={character.name} character={character} />;
       })}
