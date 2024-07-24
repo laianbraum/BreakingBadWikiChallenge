@@ -13,6 +13,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
       className="w-full h-[250px] m-[20px] no-underline desktop:w-[500px]"
       key={character.char_id}
       href={`/character/${character.char_id}`}
+      target="_blank"
       rel="noreferrer"
     >
       <div className="w-full h-full p-8 rounded-lg flex items-center justify-between bg-royal-purple text-left transition ease-in-out delay-300">
