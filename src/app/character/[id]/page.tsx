@@ -58,8 +58,8 @@ export async function generateMetadata({
   const { character, starredEpisodes } = await getCharacterInfoById(params.id);
 
   return {
-    title: "A Breaking Bad Wiki page about " + character.name,
-    description: `status, picture, name, birthday, occupations and his ${starredEpisodes.length} featured episodes`,
+    title: character.name + " - Breaking Bad Wiki",
+    description: `${character.name}'s status, picture, name, birthday, occupations and his ${starredEpisodes.length} featured episodes.`,
   };
 }
 
