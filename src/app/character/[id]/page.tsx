@@ -8,10 +8,10 @@ import { Episode, Character } from "@/types";
 
 import { Loading, CharacterProfile, StarredEpisodes } from "@/components";
 
-interface GetCharacterInfoByIdResponse {
-  character: Character;
-  starredEpisodes: Episode[];
-}
+// interface GetCharacterInfoByIdResponse {
+//   character: Character;
+//   starredEpisodes: Episode[];
+// }
 
 interface CharacterPageParams {
   id: string;
@@ -60,6 +60,9 @@ export async function generateMetadata({
   return {
     title: character.name + " - Breaking Bad Wiki",
     description: `${character.name}'s status, picture, name, birthday, occupations and his ${starredEpisodes.length} featured episodes.`,
+    icons: {
+      icon: "/icon.png",
+    },
   };
 }
 

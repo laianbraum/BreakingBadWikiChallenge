@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Breaking Bad Wiki",
   description:
     "See birthdate, status, occupations and featured episodes from all breaking bad characters",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
