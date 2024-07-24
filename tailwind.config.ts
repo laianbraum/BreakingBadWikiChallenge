@@ -5,6 +5,9 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        desktop: "1080px",
+      },
       fontFamily: {
         primary: ["Inter", ...defaultTheme.fontFamily.sans],
       },
