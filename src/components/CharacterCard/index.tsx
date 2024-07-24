@@ -10,12 +10,12 @@ interface CharacterCardProps {
 export function CharacterCard({ character }: CharacterCardProps) {
   return (
     <Link
-      className="w-[550px] m-[20px] no-underline"
+      className="w-full h-[250px] m-[20px] no-underline desktop:w-[500px]"
       key={character.char_id}
       href={`/character/${character.char_id}`}
       rel="noreferrer"
     >
-      <div className="w-full h-[250px] p-8 rounded-lg flex items-center justify-between bg-royal-purple text-left transition ease-in-out delay-300">
+      <div className="w-full h-full p-8 rounded-lg flex items-center justify-between bg-royal-purple text-left transition ease-in-out delay-300">
         <div className="w-[200px] h-[200px] overflow-hidden">
           <Image
             className="w-full h-full object-cover rounded-xl"
