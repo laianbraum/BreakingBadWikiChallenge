@@ -1,11 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Header from '../../../components/Header';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import Header from "../../../components/shared/Header";
 
-describe('Testa o Header com sucesso', () => {
-  it('Deveria renderizar', () => {
-    const HeaderText = 'Breaking bad wiki';
-    const { container } = render(<Header/> );
+describe("Testa o Header com sucesso", () => {
+  it("Deveria renderizar", () => {
+    const HeaderText = "Breaking bad wiki";
+    const { container } = render(<Header />);
 
     const header = screen.getByText(HeaderText);
 

@@ -1,15 +1,7 @@
-import Loader from "react-loader-spinner";
-import { LoadingContainer } from "../../styles/Loading";
-
-export default function Loading(){
+export function Loading() {
   return (
-    <LoadingContainer>
-      <Loader
-        type="BallTriangle"
-        color="#026635"
-        height={200}
-        width={200}
-      />
-    </LoadingContainer>
-  )
+    <div className="w-full h-[90vh] grid place-items-center">
+      <p>Loading...</p>
+    </div>
+  );
 }

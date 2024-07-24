@@ -1,51 +1,29 @@
-import React from 'react';
-import Episode from "../../types/Episode";
+import type { Episode } from "@/types";
 
-import { EpisodeCard, EpisodeInfo } from '../../styles/EpisodeCard';
-import StyledText from '../../styles/StyledText';
+interface EpisodeCardProps {
+  episode: Episode;
+}
 
-export default function EpisodeCardComponent(
-{ episode }: { episode: Episode }){
-
+export function EpisodeCard({ episode }: EpisodeCardProps) {
   return (
-    <EpisodeCard>
-      <EpisodeInfo>
-        <StyledText
-          fontSize="20pt"
-          margin="0"
-          color="#000"
-        >
+    <div className="w-[200px] h-[200px] rounded-lg p-3 mr-4 mb-4 flex flex-col justify-between items-start bg-emerald-300">
+      <div className="w-full flex">
+        <span className="text-xl m-0 text-grey-950">
           <strong>{episode.title}</strong>
-        </StyledText>
-      </EpisodeInfo>
-      <EpisodeInfo>
-        <StyledText
-          fontSize="14pt"
-          margin="25px 0 0 0"
-          color="#000"
-        >
-          <strong>Episode {episode.episode}</strong>
-        </StyledText>
-      </EpisodeInfo>
-      <EpisodeInfo>
-        <StyledText
-          fontSize="14pt"
-          margin="0 0 25px 0"
-          color="#000"
-        >
-          <strong>Season {episode.season}</strong>
-        </StyledText>
-      </EpisodeInfo>
-      <EpisodeInfo>
-        <StyledText
-          fontSize="14pt"
-          margin="14px 0 0 0"
-          color="#000"
-        >
+        </span>
+      </div>
+      <div className="w-full flex">
+        <span className="text-lg m-0 mt-2 text-grey-950">
+          <strong>
+            S{episode.season}E{episode.episode}
+          </strong>
+        </span>
+      </div>
+      <div className="w-full flex">
+        <span className="text-lg m-0 text-grey-950">
           <strong>Released in {episode.air_date}</strong>
-        </StyledText>
-      </EpisodeInfo>
-    </EpisodeCard>
-  )
-
+        </span>
+      </div>
+    </div>
+  );
 }
