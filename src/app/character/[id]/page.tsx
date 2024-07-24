@@ -1,9 +1,12 @@
 "use server";
+import { Metadata } from "next";
+
+import episodes from "@/mocks/episodes.json";
+import characters from "@/mocks/characters.json";
 
 import { Episode, Character } from "@/types";
 
 import { Loading, CharacterProfile, StarredEpisodes } from "@/components";
-import { Metadata } from "next";
 
 interface GetCharacterInfoByIdResponse {
   character: Character;
@@ -19,9 +22,19 @@ interface CharacterPageProps {
 }
 
 async function getCharacterInfoById(id: string) {
-  const res = await fetch(`${process.env.URL}/api/character?id=${id}`);
-  const { character, starredEpisodes }: GetCharacterInfoByIdResponse =
-    await res.json();
+  // const res = await fetch(`${process.env.URL}/api/character?id=${id}`);
+  // const { character, starredEpisodes }: GetCharacterInfoByIdResponse =
+  //   await res.json();
+
+  const character = characters.find((c) => c.id + "" === id + "");
+
+  if (!character) {
+    throw new Error("Invalid character");
+  }
+
+  const starredEpisodes = episodes.filter(({ characters }) => {
+    return characters.includes(character.name as string);
+  });
 
   return {
     character,
@@ -30,13 +43,11 @@ async function getCharacterInfoById(id: string) {
 }
 
 export async function generateStaticParams(): Promise<CharacterPageParams[]> {
-  const res = await fetch(`${process.env.URL}/api/character`);
+  // const res = await fetch(`${process.env.URL}/api/character`);
 
-  if (!res.ok) {
-    throw new Error("Error while fetching characters");
-  }
-
-  const characters: Character[] = await res.json();
+  // if (!res.ok) {
+  //   throw new Error("Error while fetching characters");
+  // }
 
   return characters.map((x) => ({ id: x.char_id + "" }));
 }
